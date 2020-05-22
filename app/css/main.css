@@ -1368,20 +1368,6 @@ select, .select-item {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
-.bg-slide {
-  background: transparent;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  pointer-events: none; }
-  .bg-slide.animated {
-    background: #000000; }
-
 .card.inverse:after {
   background: #000000; }
   .card.inverse:after:first-child {
@@ -1723,7 +1709,7 @@ select, .select-item {
     width: 100%;
     text-align: center;
     cursor: pointer;
-    padding: 0 25px; }
+    padding: 0 20px; }
     .years-item:before {
       content: '';
       position: absolute;
@@ -1742,7 +1728,37 @@ select, .select-item {
 
 .article {
   padding: 100px 14.3vw 50px;
-  position: relative; }
+  position: relative;
+  -webkit-transition: all 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  overflow: hidden; }
+  .article:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    margin-top: -8px;
+    right: 0;
+    background: #ffffff;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    -webkit-transition: -webkit-transform .6s;
+    transition: -webkit-transform .6s;
+    transition: transform .6s;
+    transition: transform .6s, -webkit-transform .6s;
+    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+            transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    z-index: 2;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s; }
+  .article.inverse:after {
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    background: #000000; }
+  .article.animated:after {
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0); }
   .article .title {
     max-width: 555px; }
   .article__date {
@@ -2199,7 +2215,7 @@ select, .select-item {
   .years {
     width: auto; }
   .years-item.active:before {
-    width: 20px; }
+    width: 15px; }
   .article__socials {
     position: initial;
     display: -webkit-box;
@@ -2404,4 +2420,7 @@ select, .select-item {
         -ms-flex-pack: start;
             justify-content: flex-start; }
   .news__details {
-    padding-top: 70px; } }
+    padding-top: 70px; }
+  .years-item {
+    font-size: 14px;
+    line-height: 16px; } }
