@@ -1,0 +1,243 @@
+.section__map
+  position: relative
+.section__parks
+  padding: 200px 0
+  .title-ubuntu
+    margin-bottom: 30px
+.parks-row
+  display: flex
+  flex-wrap: wrap
+
+.bg-slide
+  background: transparent
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: 2
+  animation-duration: 0.4s
+  pointer-events: none
+  &.animated
+    background: $color2
+.card.inverse:after
+  background: $color2
+  &:first-child
+    transition-delay: 0s
+  &:nth-child(2)
+    transition-delay: 0.2s
+  &:nth-child(3)
+    transition-delay: 0.4s
+  &:nth-child(4)
+    transition-delay: 0.6s
+  &:nth-child(5)
+    transition-delay: 0.7s
+  &:nth-child(6)
+    transition-delay: 0.8s
+  &:nth-child(7)
+    transition-delay: 0.9s
+  &:nth-child(8)
+    transition-delay: 1s
+
+.card.animated
+  &:after
+    transform: translate3d(100%,0,0)
+
+.card
+  width: calc(50% - 12.5px)
+  margin: 25px 25px 0 0
+  position: relative
+  height: 380px
+  transition: all .6s cubic-bezier(.785,.135,.15,.86)
+  overflow: hidden
+  &:first-child
+    &:after
+      transition-delay: 0s
+  &:nth-child(2)
+    &:after
+      transition-delay: 0s
+  &:nth-child(3)
+    &:after
+      transition-delay: 0.2s
+  &:nth-child(4)
+    &:after
+      transition-delay: 0.2s
+  &:nth-child(5)
+    &:after
+      transition-delay: 0.4s
+  &:nth-child(6)
+    &:after
+      transition-delay: 0.4s
+  &:nth-child(7)
+    &:after
+      transition-delay: 0.6s
+  &:nth-child(8)
+    &:after
+      transition-delay: 0.6s
+  &:nth-child(9)
+    &:after
+      transition-delay: 0.8s
+  &:nth-child(10)
+    &:after
+      transition-delay: 0.8s
+  &:after
+    content: ''
+    position: absolute
+    height: 100%
+    width: 100%
+    top: 0
+    margin-top: -8px
+    right: 0
+    background: $color1
+    transform: translate3d(-100%,0,0)
+    transition: transform .4s
+    transition-timing-function: cubic-bezier(.7,0,.3,1)
+    transition-delay: 0.2s
+    z-index: 2
+  &:hover
+    transform: translateY(-10px)
+  &:nth-child(2n+2)
+    margin-right: 0
+  &-img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    z-index: 1
+  &-bottom
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    min-height: 70px
+    padding: 10px 30px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background: rgba($color1, 0.8)
+    z-index: 3
+  &-socials
+    display: flex
+    align-items: center
+  &-social
+    margin-left: 15px
+    &__icon
+      width: 15px
+      height: 15px
+
+.parks-inner
+  padding-top: 80px
+  .socials
+    align-items: center
+    margin-top: 45px
+  .social
+    height: 23px
+    width: 20px
+    margin-right: 25px
+    img
+      width: 100%
+      height: 100%
+  .row
+    align-items: flex-start
+  .slider-slide
+    padding: 0%
+  .slider-img
+    margin: 0
+    max-height: 100%
+    object-fit: cover
+    width: 100%
+  .slick-track, .slick-list
+    height: 100%
+  #map, .parks-inner__slider
+    height: calc(50vh - 40px)
+    min-height: 400px
+    transition: all 0.3s ease
+  .parks-inner__slider
+    position: relative
+    &:before, &:after
+      content: ''
+      position: absolute
+      width: 160px
+      top: 0
+      height: 100%
+      z-index: 1
+      pointer-events: none
+    &:before
+      background: transparent linear-gradient(-269deg, #FFFFFFDB 0%, #80808000 100%)
+      left: 0
+    &:after
+      right: 0
+      background: transparent linear-gradient(269deg, #FFFFFFDB 0%, #80808000 100%)
+.parks-inner__half
+  width: 50%
+  position: relative
+  .c-black
+    margin-bottom: 25px
+  &:first-child
+    padding: 10vh 30px 100px 13.75vw
+.parks-inner__title
+  position: relative
+  font: Bold 30px/35px "Ubuntu-Bold"
+  color: #000000
+  margin-bottom: 38px
+  &:before
+    content: ''
+    position: absolute
+    top: 16px
+    right: calc(100% + 30px)
+    height: 1px
+    width: 100%
+    background: $color5
+.nav-videos
+  .tab
+    color: #292929
+    border: none
+    &.active
+      color: $color5
+.videos
+  padding: 200px 0
+.content-item
+  .inverse
+    transform: scale(0.3)
+    opacity: 0
+  &.active
+    .animated
+      opacity: 1
+      transform: scale(1)
+.videos
+  &-row
+    display: flex
+    flex-wrap: wrap
+  &-item
+    width: calc(33.33% - 17px)
+    margin-right: 25px
+    margin-top: 25px
+    height: 385px
+    position: relative
+    transform: scale(0)
+    transition-delay: .2s
+    transition: all .6s cubic-bezier(.785,.135,.15,.86)
+    &:nth-child(3n+3)
+      margin-right: 0
+    &:hover
+      .videos-play
+        background: none
+
+  &-img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &-play
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: rgba($color2, 0.3)
+    z-index: 1
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: all 0.3s ease
+    &-icon
+      width: 68px
+      height: 68px

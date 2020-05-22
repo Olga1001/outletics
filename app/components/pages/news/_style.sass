@@ -1,0 +1,131 @@
+.section-news
+  padding: 180px 0 200px
+  &__row
+    margin: 0 auto
+    width: 80%
+    display: flex
+    flex-wrap: wrap
+    padding-top: 25px
+    .news__card
+      margin-bottom: 25px
+.news
+  &__details
+    padding-top: 80px
+    display: flex
+    position: relative
+    flex-wrap: wrap
+    &-left
+      width: 73.5%
+    &-right
+      width: 26.5%
+      height: 100%
+      position: absolute
+      right: 0
+      top: 0
+      padding-top: 80px
+  &__image
+    background: url("../img/outletics_news_inner/news_main_image.jpg") no-repeat center / cover
+    width: 100%
+    height: 70vh
+    display: flex
+    justify-content: flex-end
+
+.years
+  width: 12vw
+  height: 100%
+  background: $color5
+  display: flex
+  flex-direction: column
+  justify-content: center
+  &-item
+    font: Bold 20px/24px "Ubuntu-Bold"
+    color: #DFDFDF
+    position: relative
+    overflow: hidden
+    margin: 2.5vh 0
+    width: 100%
+    text-align: center
+    cursor: pointer
+    padding: 0 25px
+    &:before
+      content: ''
+      position: absolute
+      right: 0
+      width: 0
+      height: 1px
+      top: 50%
+      transform: translateY(-50%)
+      background: #fff
+      z-index: 4
+      transition: all 0.3s ease
+    &.active
+      &:before
+        width: 3.9vw
+
+.article
+  padding: 100px 14.3vw 50px
+  position: relative
+  .title
+    max-width: 555px
+  &__date
+    font: Bold 15px/17px "Ubuntu-Bold"
+    color: #E1251B
+    margin-bottom: 20px
+  &__content
+    padding: 33px 0 68px
+    margin-bottom: 49px
+    max-width: 790px
+    border-bottom: 1px solid #DFDFDF
+  &__text
+    font: 400 17px/30px "Lato-Regular"
+    margin-bottom: 30px
+  &__socials
+    position: absolute
+    top: 100px
+    right: 5vw
+    display: flex
+    flex-direction: column
+    align-items: center
+    .social
+      margin: 0 0 30px 0
+      display: block
+  &__btns
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 790px
+  &__btn
+    display: flex
+    align-items: center
+    span
+      font: Bold 16px/18px "Ubuntu-Bold"
+      color: #292929
+      padding: 0 30px
+    &-icon
+      width: 31px
+      height: 14px
+.news-item
+  width: 100%
+  height: 8.9vw
+  min-height: 140px
+  //height: 172px
+  display: flex
+  justify-content: center
+  align-items: center
+  background: url("../img/outletics_news_inner/news_other_articles_image.jpg") no-repeat center / cover
+  filter: grayscale(1)
+  transition: all 0.3s ease
+  &:hover
+    filter: none
+  &__name
+    background: rgba(#FFFFFF, 0.71)
+    padding: 0.9vw 1.8vw
+    font: Bold 1vw/1.25vw "Ubuntu-Bold"
+    //font: Bold 20px/24px "Ubuntu-Bold"
+    max-width: 90%
+    text-align: center
+.other__news
+  height: 100%
+  overflow-y: auto
+  width: 100%
+

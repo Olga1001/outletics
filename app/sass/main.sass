@@ -1,0 +1,748 @@
+@import "fonts"
+@import "vars"
+
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  font-size: 14px
+  line-height: 16px
+  color: #A9A9A9
+
+*:-moz-placeholder
+  font-size: 14px
+  line-height: 16px
+  color: #A9A9A9
+
+*::-moz-placeholder
+  font-size: 14px
+  line-height: 16px
+  color: #A9A9A9
+
+*:-ms-input-placeholder
+  font-size: 14px
+  line-height: 16px
+  color: #A9A9A9
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+a
+  outline: none
+  text-decoration: none
+  color: #000000
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-family: "Lato-Regular", sans-serif
+  font-size: 15px
+  position: relative
+  line-height: normal
+  font-style: normal
+  font-weight: normal
+  background: $color1
+  color: $color2
+img
+  display: block
+  object-fit: contain
+
+input, textarea
+  border: none
+  outline: none
+  color: $color2
+  resize: none
+  -webkit-appearance: none
+  appearance: none
+
+button
+  cursor: pointer
+  outline: none
+  border: none
+  background: transparent
+
+button:focus
+  outline: none
+
+p
+  font: 400 15px/25px "Lato-Regular"
+  line-height: 25px
+  letter-spacing: 0
+  color: $color6
+
+strong
+  font-family: "Ubuntu-Bold", sans-serif
+  font-style: normal
+  font-weight: bold
+
+select, .select-item
+  background: transparent
+  font: Bold 15px/17px "Ubuntu-Bold"
+  letter-spacing: 0
+  text-transform: uppercase
+  border: none
+  appearance: none
+  color: $color1
+  opacity: 1
+  padding-right: 15px
+  outline: none
+  position: relative
+  cursor: pointer
+  min-width: 35px
+  transition: all 0.3s ease
+  &:hover
+    color: $color5
+  &:before
+    content: ''
+    position: absolute
+    right: 0
+    top: 0
+    height: 100%
+    width: 10px
+    background: transparent url("../img/arrow_donw.svg") no-repeat right center / 10px
+    pointer-events: none
+.select
+  position: relative
+  &.active
+    .select-item:before
+      transform: scale(1,-1)
+  &-drop
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    top: 25px
+    display: none
+  &-menu
+    background: $color2
+    padding: 5px 10px
+.select-option, .select-link
+  text-transform: uppercase
+  color: $color1
+  font: Bold 12px/17px "Ubuntu-Bold"
+  margin-bottom: 5px
+  transition: all 0.3s ease
+
+  &:last-child
+    margin-bottom: 0
+  &:hover, &.active
+    color: $color5
+.container
+  max-width: 1400px
+  width: 100%
+  margin: 0 auto
+  padding: 0 15px
+.row
+  display: flex
+  align-items: center
+  justify-content: space-between
+.header
+  padding: 30px 4.16vw
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 9
+  transition: all 0.3s ease
+  &-row
+    display: flex
+    align-items: center
+  &.bg-black
+
+.menu
+  display: flex
+  align-items: center
+  &-link
+    font: Bold 15px/17px "Ubuntu-Bold"
+    letter-spacing: 0
+    color: $color1
+    display: block
+    opacity: 1
+    padding: 0 15px
+    position: relative
+    line-height: 1
+    transition: all 0.3s ease
+    &:before
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      background: $color1
+      width: 1px
+      height: 16px
+
+    &.active, &:hover
+      color: $color5
+
+  &-item
+    display: flex
+    &:last-child
+      .menu-link
+        &:before
+          content: none
+.logo
+  margin-right: 45px
+  &__icon
+    height: 20px
+.lang
+  position: relative
+  z-index: 10
+.footer
+  background: $color2
+  padding: 55px 0 85px
+  .logo
+    margin: 20px 0
+    display: block
+  .text-20, .text-16
+    margin-bottom: 17px
+    line-height: 19px
+  .text-20
+    margin-bottom: 25px
+  &__row
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__col
+    border-left: 1px solid $color1
+    padding-left: 35px
+    &:first-child
+      border: none
+      padding: 0
+  &-item
+    padding-bottom: 10px
+    &:last-child
+      padding-bottom: 0
+      .text-16
+        &:last-child
+          margin-bottom: 0
+.socials
+  display: flex
+.social
+  margin-right: 47px
+  &:last-child
+    margin-right: 0
+  &-icon
+    width: 32px
+    height: 32px
+.img-point
+  width: 14px
+  height: 14px
+  margin-right: 10px
+.switz-flag
+  float: right
+  margin: 15px 0 0 15px
+  width: 20px
+  height: 20px
+  display: block
+.address
+  display: flex
+.col-between
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+.video
+  width: 100%
+  height: 100%
+.video-btn
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  &__circle
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 108px
+    height: 108px
+    animation: pulse 1.5s infinite
+    &_two
+      width: 148px
+      height: 148px
+  &_play
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 72px
+    height: 72px
+    animation: pulse 1.5s infinite
+.btn
+  text-align: center
+  background: #FFFFFF
+  border: 1px solid #000000
+  font: Bold 14px/16px "Ubuntu-Bold"
+  line-height: 53px
+  padding: 0 24px
+  color: $color2
+  display: block
+  margin: 0 auto
+  width: fit-content
+.up
+  position: absolute
+  right: 8.85vw
+  bottom: 80px
+  z-index: 8
+  opacity: 0
+  pointer-events: none
+  transition: all 0.3s ease
+  &.show
+    opacity: 1
+    pointer-events: auto
+  &__icon
+    width: 37px
+    height: 82px
+.burger
+  display: none
+  width: 40px
+  height: 40px
+  position: relative
+  cursor: pointer
+  z-index: 10
+  margin-left: 20px
+  &.active
+    .burger-line-center
+      transform: translateX(-20%)
+  &-line
+    height: 2px
+    width: 90%
+    background: $color1
+    transition: all 0.3s ease
+    margin: 8px auto
+    display: block
+.scroll-down
+  position: absolute
+  right: 4.16vw
+  bottom: calc(2.08vw - 13px)
+  z-index: 2
+  display: flex
+  align-items: center
+  font: Bold 16px/18px "Ubuntu-Bold"
+  color: $color2
+  &__icon
+    margin-left: 15px
+    animation: bounce 3s infinite
+.scroll-red
+  width: 34px
+  height: 34px
+  border-radius: 50%
+  background: $color5
+  display: block
+  position: absolute
+  right: auto
+  left: 50%
+  bottom: 23px
+  &__icon
+    margin: 0 auto
+    height: 100%
+    width: 8px
+    animation: bounce2 3s infinite
+  &:before, &:after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 50%
+    background: rgba(#E1251B, 0.21)
+    animation: pulse 1.5s infinite
+  &:before
+    width: 44px
+    height: 44px
+  &:after
+    width: 56px
+    height: 56px
+.texts
+  display: flex
+  flex-wrap: wrap
+  &-col
+    width: calc(50% - 10px)
+    &:last-child
+      margin-left: 20px
+    p
+      margin-bottom: 25px
+.tabs
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  margin: 30px 0
+  text-align: center
+.tab
+  font: Bold 14px/1"Ubuntu-Bold"
+  color: $color2
+  padding: 0 29px
+  border-right: 1px solid $color5
+  cursor: pointer
+  margin-bottom: 15px
+  text-transform: uppercase
+  &:last-child
+    border: none
+  &.active
+    color: $color5
+
+.nav-news .tab
+  border: none
+  padding: 0 47px
+  color: #292929
+  &.active
+    color: $color5
+.close
+  background: url("../img/close.svg") no-repeat center / 13px
+  width: 23px
+  height: 23px
+  padding: 5px
+  position: absolute
+  right: 4.16vw
+  top: 4.7vh
+.list-item
+  font: 400 15px/25px "Lato-Regular"
+  color: #000000
+.slider-img
+  max-height: 368px
+  height: 100%
+  margin: 0 auto
+.slider-one
+  max-width: 1500px
+  width: 100%
+  margin: 0 auto
+  position: relative
+  z-index: 3
+  .slick-dots
+    bottom: -50px
+    li button
+      background: #d6d6d6
+      opacity: 0.5
+      &:hover
+        background: #869791
+    li.slick-active button
+      background: #fff
+  .slick-next, .slick-prev
+    width: 10px
+    height: 17px
+    &:before
+      content: none
+  .slick-next
+    right: 10px
+    background: url("../img/next-white.svg") no-repeat center / contain
+  .slick-prev
+    left: 10px
+    background: url("../img/prev-white.svg") no-repeat center / contain
+.slider-slide
+  padding: 0 15px
+  outline: none
+  display: block
+.slick-prev
+  left: 0
+.slick-next
+  right: 0
+.slider-two
+  .slider-slide
+    padding: 0
+    margin: 0 6vw
+  .slick-next, .slick-prev
+    width: 30px
+    height: 30px
+    z-index: 3
+    &:before
+      content: none
+  .slick-next
+    left: 78vw
+  .slick-prev
+    left: 20.2vw
+.slick-next
+  background: url("../img/next.svg") no-repeat center / contain
+.slick-prev
+  background: url("../img/prev.svg") no-repeat center / contain
+.slick-dots
+  bottom: 0
+  li
+    width: auto
+    height: auto
+    padding: 0
+    margin: 0
+    button
+      color: transparent
+      background: $color2
+      opacity: .15
+      border-radius: 50%
+      padding: 0
+      margin: 5px 7px
+      width: 10px
+      height: 10px
+      transition: all .2s ease
+      &:before
+        content: none
+    &.slick-active
+      button
+        opacity: 1
+.more-map
+  display: none
+  position: absolute
+  right: calc(20% - 50px)
+  width: 50px
+  height: 50px
+  z-index: 5
+  padding: 15px
+  top: 0
+  bottom: 0
+  margin: auto
+  border-radius: 50%
+  background: rgba($color2, 0.8) url("../img/left_arrow-white.svg") no-repeat center / 30%
+  transition: all 0.3s ease
+  &.active
+    right: 60%
+    transform: rotate(180deg)
+#map
+  height: 770px
+  width: 100%
+.gm-style .gm-style-iw-c
+  padding: 10px 10px 0!important
+  p
+    font: Bold 14px/16px "Ubuntu-Bold"
+    color: #000000
+    text-align: center
+    width: 100%
+.gm-ui-hover-effect
+  //display: none!important
+.gm-style .gm-style-iw-t::after
+  width: 6px!important
+  height: 6px!important
+.gradient__revealer
+  width: 100%
+  height: 200px
+  background: linear-gradient(to top,transparent 0,rgba(0,0,0,.3) 40%,rgba(0,0,0,.9) 90%,#000 100%)
+  position: absolute
+  top: 80px
+  opacity: 0
+  transition: all .3s ease-in
+
+.gradient
+  width: 100%
+  height: 100%
+  position: absolute
+  z-index: -1
+  left: 0
+  top: 0
+  background: #000
+  background-size: contain
+  opacity: 0
+  filter: blur(10px)
+.gradient.no--gradient
+  height: 80px
+  background-image: none
+  filter: blur(10px)
+  filter: none
+  opacity: 0
+  transition: opacity .3s ease-in
+
+.title-ubuntu
+  font: Bold 178px/200px "Ubuntu-Bold"
+  color: #fff
+  margin: 0 auto 79px
+  display: block
+  text-shadow: 0 0 4px #B9B9B9
+  width: fit-content
+  word-break: break-all
+  position: relative
+  overflow: hidden
+  &:before
+    content: attr(data-letters)
+    position: absolute
+    z-index: 2
+    overflow: hidden
+    color: #fff
+    white-space: nowrap
+    width: 0%
+    left: 0
+    transition: width .4s
+    transition-delay: .5s
+  &.inverse
+    &:before
+      color: #000
+  &.animated
+    &:before
+      width: 100%
+
+.title-main
+  font: Bold 64px/74px "Ubuntu-Bold"
+  margin-bottom: 10px
+  display: inline-block
+.title
+  font: Bold 34px/44px "Ubuntu-Bold"
+  margin-bottom: 18px
+.text-24
+  font: Bold 24px/44px "Ubuntu-Bold"
+  margin-bottom: 20px
+.text-20
+  font: Bold 20px/24px "Ubuntu-Bold"
+  color: #FFFFFF
+.text-16
+  font: Bold 16px/24px "Ubuntu-Bold"
+
+.animated
+  -webkit-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+.animated.hinge
+  -webkit-animation-duration: 2s
+  animation-duration: 2s
+
+.opacitied
+  animation-name: opacityFade
+
+@keyframes opacityFade
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes fadeInUpShort
+  from
+    opacity: 0
+    transform: translate3d(0,10%,0)
+  to
+    opacity: 1
+    transform: none
+
+.fadeInUpShort
+  animation-name: fadeInUpShort
+
+@keyframes bounce
+  0%,100%,20%,50%,80%
+    transform: translateY(0)
+  40%
+    transform: translateY(-15px)
+  60%
+    transform: translateY(-15px)
+
+@keyframes bounce2
+  0%,100%,20%,50%,80%
+    transform: translateY(0)
+  40%
+    transform: translateY(-5px)
+  60%
+    transform: translateY(-5px)
+
+@keyframes pulse
+  0%
+    transform: translate(-50%, -50%) scale(1)
+  50%
+    transform: translate(-50%, -50%) scale(0.9)
+  100%
+    transform: translate(-50%, -50%) scale(1)
+
+@keyframes pulse2
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.1)
+  100%
+    transform: scale(1)
+
+.pulse2
+  animation-name: pulse2
+
+@keyframes bounceIn
+  0%
+    opacity: 0
+    transform: scale(.3)
+
+
+  50%
+    opacity: 1
+    transform: scale(1.05)
+
+
+  70%
+    transform: scale(.9)
+
+
+  100%
+    transform: scale(1)
+
+
+.bounceIn
+  animation-name: bounceIn
+
+@keyframes fadeInUp
+  0%
+    opacity: 0
+    transform: translateY(20px)
+
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+.fadeInUp
+  animation-name: fadeInUp
+
+@keyframes slideOutRight
+  0%
+    transform: translateX(0)
+  100%
+    transform: translateX(2000px)
+
+.slideOutRight
+  animation-name: slideOutRight
+
+@import "../components/pages/main/style"
+@import "../components/pages/pruducts/style"
+@import "../components/pages/parks/style"
+@import "../components/pages/news/style"
+
+.weight-bold
+  font-weight: bold
+  font-family: "Ubuntu-Bold"
+.weight-regular
+  font-weight: 400
+  font-family: "Lato-Regular"
+
+.bg-black
+  background-color: $color2
+.bg-dark
+  background-color: #292929
+
+.c-black
+  color: #000000
+.c-white
+  color: $color1
+.c-red
+  color: $color5
+.c-gray
+  color: $color6
+
+.mb-5
+  margin: 0 0 5px 0
+
+@import "media"
+// Всегда в конце

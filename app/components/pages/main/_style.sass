@@ -1,0 +1,190 @@
+.section__video
+  background: linear-gradient(to top, rgba(#000, 0.3)), url("../img/banner.png") no-repeat center / cover
+  width: 100%
+  max-height: 765px
+  height: 40vw
+  position: relative
+  &:before, &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    width: 0
+    height: 0
+    border-style: solid
+    z-index: 1
+  &:before
+    left: 0
+    border-width: 2.7vw 0 0 25vw
+    border-color: transparent transparent transparent $color1
+  &:after
+    right: 0
+    border-width: 0 0 5vw 75vw
+    border-color: transparent transparent $color1 transparent
+
+.outletics
+  padding: 200px 0 168px
+  .row
+    align-items: normal
+  &__half
+    width: 50%
+    position: relative
+    &:first-child
+      &:before
+        content: ''
+        position: absolute
+        top: -145px
+        left: -128px
+        width: 1px
+        max-height: 542px
+        height: calc(100% + 145px)
+        background: $color5
+    &-img
+      max-height: 495px
+      max-width: 510px
+      width: 100%
+      height: 100%
+      margin: 60px 0 0 auto
+    &:last-child
+      padding-left: 20px
+.products
+  padding-bottom: 206px
+.products__item
+  padding: 160px 0 140px
+  width: 100%
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  min-height: 35vw
+.products__bg
+  background: linear-gradient(to top, rgba(#000, 0.3)), url("../img/johannSauty-Urbafit-0043.png") no-repeat center 75%/ cover
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  filter: grayscale(1)
+  height: 100%
+  z-index: 1
+
+.testimonials
+  padding-bottom: 200px
+  &-card
+    height: 504px
+    max-width: 904px
+    //max-width: 47vw
+    width: 100%
+    display: flex
+    margin: 0 auto
+    //margin: 0 6vw
+    background: $color7
+    .text-24
+      line-height: 24px
+    p.c-gray
+      margin-top: 15px
+      line-height: 25px
+    &__left
+      width: calc(100% - 470px)
+      padding: 15px 27px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        right: -115px
+        top: 0
+        height: 0
+        width: 0
+        border-style: solid
+        border-width: 504px 115px 0 0
+        border-color: $color7 transparent transparent transparent
+    &__right
+      width: 470px
+    &__img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &__info
+      max-width: 325px
+      .c-red, .c-white
+        opacity: 0
+        transform: translateY(-10px)
+        transition: all .3s
+        display: inline-block
+        transition-delay: .3s
+      .c-gray
+        opacity: 0
+        transform: translateY(10px)
+        transition: all .3s
+        transition-delay: 350ms
+.slider-two .slick-active.slick-center
+  .c-red, .c-white, .c-gray
+    opacity: 1
+    transform: translateY(0)
+.number
+  font: Bold 87px/1 "Ubuntu-Bold"
+  color: $color8
+  position: relative
+  z-index: 2
+  right: -77px
+  top: 0
+.news .title-ubuntu.animated:before
+  height: 100%
+.news
+  padding-bottom: 200px
+  .title-ubuntu
+    writing-mode: vertical-lr
+    transform: rotate(180deg)
+    flex-shrink: 0
+    padding: 0 0 0 30px
+    margin: 0
+    &:before
+      writing-mode: tb
+      width: 100%
+      height: 0%
+      transform: rotate(360deg)
+      transition: height .4s
+      transition-delay: 0.6s
+
+  &__row
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+  &__card
+    width: calc(50% - 12px)
+    margin-right: 24px
+    position: relative
+    overflow: hidden
+    &:nth-child(2n+2)
+      margin-right: 0
+    &:hover
+      .news__card-img
+        transform: scale(1.1)
+      .news__card-title
+        color: $color5
+    &:before
+      content: ''
+      position: absolute
+      right: 0
+      bottom: 0
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 0 0 185px 558px
+      border-color: transparent transparent $color1 transparent
+      z-index: 1
+    &-img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      transition: all 0.3s ease
+    &-title
+      font: Bold 20px/24px "Ubuntu-Bold"
+      color: $color2
+      position: absolute
+      right: 25px
+      bottom: 25px
+      z-index: 2
+      transition: all 0.3s ease
+

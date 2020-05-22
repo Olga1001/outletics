@@ -1,0 +1,492 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1400px)
+  .title-ubuntu
+    font-size: 11.71vw
+    line-height: 10.4vw
+  .up
+    right: 40px
+  .slider-two .slick-next
+    left: 85%
+  .slider-two .slick-prev
+    left: 12%
+  .news__card:before
+    border-width: 0 0 13vw 40vw
+  .news__card-title
+    right: 1.3vw
+    bottom: 1.3vw
+  .slider-products
+    .slider-img
+      height: 15vw
+    .slick-active.slick-center .slider-img
+      height: 25vw
+  .slider-products .slick-track
+    min-height: 35vw
+  .card
+    height: 27.1vw
+  .parks-row
+    padding: 0 calc(5% - 15px)
+  .videos-item, .videos-item:nth-child(3n+3)
+    width: calc(50% - 12.5px)
+    margin-right: 25px
+    &:nth-child(2n+2)
+      margin-right: 0
+  .videos-row
+    width: calc(80% - 30px)
+    margin: 0 auto
+  .videos-item
+    height: 27.5vw
+@media only screen and (max-width : 1199px)
+  .slider-two .slick-prev
+    left: 10px
+  .slider-two .slick-next
+    right: 10px
+    left: auto
+  .slider-two .slider-slide
+    margin: 0 40px
+  .slider-img
+    max-height: 250px
+  .slider-one
+    max-width: 800px
+  .pruducts-container
+    width: 75%
+  .slider-products
+    .slider-img
+      height: 280px
+    .slick-active.slick-center .slider-img
+      height: 440px
+  .slider-products .slick-track
+    min-height: 500px
+  .article
+    padding: 100px 8vw 50px
+  .news-item__name, .years-item
+    font: Bold 16px/19px "Ubuntu-Bold"
+  .news__details-right
+    width: 30%
+  .news__details-left
+    width: 70%
+@media only screen and (max-width : 1024px)
+  .slider-products
+    .slider-img
+      height: 150px
+    .slick-active.slick-center .slider-img
+      height: 280px
+    .slider-products .slick-track
+      min-height: 400px
+  .pruducts-inner__title:before
+    right: calc(100% + 20px)
+  .pruducts-inner__half
+    padding: 11.3vh 9.3vw
+  .pruducts-inner__btn .text-16
+    display: none
+  .pruducts-inner__btn
+    padding: 0 15px
+    &:first-child
+      padding-left: 0
+@media only screen and (max-width : 991px)
+  .news .news__card
+    width: 100%
+    height: 76vw
+    margin: 0 0 25px 0
+  .news .row
+    align-items: flex-start
+  .news .title-ubuntu
+    position: sticky
+    top: 90px
+  .news .news__card:before
+    border-width: 0 0 28vw 87vw
+  .news .news__card-title
+    right: 3vw
+    bottom: 3vw
+  .news__card:before
+    border-width: 0 0 15vw 44vw
+  .slider-two .slider-slide
+    margin: 0 10px
+  .slider-two
+    padding-bottom: 50px
+  .up
+    position: absolute
+  .pruducts-container
+    width: 100%
+  .slider-products .slick-next
+    right: 10px
+  .slider-products .slick-prev
+    left: 10px
+  .section-news__row
+    width: 100%
+    padding: 0 5%
+  .parks-inner__half .c-black br
+    display: none
+  .parks-inner__title
+    font-size: 24px
+@media only screen and (max-width : 850px)
+  .burger
+    display: block
+  .outletics
+    .row
+      display: block
+  .outletics__half
+    width: 100%
+  .outletics__half:last-child
+    padding: 0
+  .outletics__half-img
+    margin: 20px auto
+  .header
+    padding: 20px
+    background: $color2
+  .gradient.no--gradient
+    height: 60px
+  .gradient__revealer
+    top: 60px
+  .logo__icon
+    height: 14px
+  .menu
+    position: fixed
+    z-index: 9
+    right: 0
+    top: 0
+    height: 100%
+    overflow-y: auto
+    width: 60%
+    transform: translateX(100%)
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    background: rgba(0,0,0,.8)
+    top: 0
+    margin: 0
+    transition: all .3s cubic-bezier(0,.37,.24,1)
+    &.active
+      transform: translateX(0)
+      .menu-item
+        transform: translateX(0)
+        opacity: 1
+  .menu-link
+    padding: 5px 25px
+    font-size: 20px
+    transition: all .5s
+    &:before
+      content: none
+  .menu-item
+    padding: 15px 0
+    opacity: 0
+    transform: translateX(100px)
+    &:nth-child(1)
+      transition: all .5s cubic-bezier(0,.6,.58,1) 150ms
+    &:nth-child(2)
+      transition: all .5s cubic-bezier(0,.6,.58,1) .2s
+    &:nth-child(3)
+      transition: all .5s cubic-bezier(0,.6,.58,1) 250ms
+    &:nth-child(4)
+      transition: all .5s cubic-bezier(0,.6,.58,1) .3s
+  .outletics, .products__item
+    padding: 100px 0
+  .products, .testimonials, .news
+    padding-bottom: 100px
+  .videos
+    padding: 100px 0
+  .section__video
+    height: 500px
+  .section__video:after
+    border-width: 0 0 50px 75vw
+  .section__video:before
+    border-width: 20px 0 0 25vw
+  .scroll-down
+    bottom: 5px
+    right: 20px
+  .title-ubuntu
+    margin-bottom: 50px
+  .testimonials-card__right
+    width: 55%
+  .testimonials-card__left
+    width: 45%
+  .footer__col, .footer__col:first-child
+    width: 100%
+    border: none
+    border-bottom: 1px solid #ffffff
+    padding: 20px 0 5% 2%
+    &:last-child
+      border: none
+  .testimonials-card
+    max-width: 600px
+  .img-burger
+    width: 45px
+    height: 45px
+  .testimonials-card__left:before
+    right: -90px
+    border-width: 515px 90px 0 0
+  .number
+    font-size: 60px
+    right: -80px
+    line-height: 50px
+  .testimonials-card__info .c-gray br
+    display: none
+  .text-24
+    font-size: 18px
+    line-height: 21px
+  .text-16
+    font-size: 14px
+    line-height: 21px
+  p
+    font-size: 14px
+    line-height: 21px
+  .testimonials-card
+    height: 400px
+  .testimonials-card__left
+    padding: 15px
+  .slider-one
+    max-width: 80%
+  .up__icon
+    width: 25px
+    height: 50px
+  .pruducts-inner__flex
+    flex-direction: column-reverse
+    height: auto
+  .pruducts-inner__half
+    width: 100%
+    min-height: calc(50vh - 40px)
+    padding: calc(25px + 5%)
+  .pruducts-inner__texts
+    max-width: 100%
+  .pruducts-inner__img
+    height: 270px
+  .close
+    top: 15px
+  .card
+    height: 200px
+    width: 100%
+    margin: 20px 0 0 0
+  .section__parks
+    padding-top: 100px
+  #map
+    height: 70vh
+  .news__card
+    width: 100%
+    margin: 0 0 20px 0
+    height: 80vw
+  .news__card:before
+    border-width: 0 0 26vw 88vw
+  .nav-news .tab
+    padding: 0 20px
+  .section-news
+    padding-bottom: 100px
+  .videos-item
+    width: 100%!important
+    margin-right: 0!important
+    margin-top: 10px
+    height: 41vw
+  .videos-play-icon
+    width: 50px
+    height: 50px
+  .parks-inner .row
+    flex-direction: column-reverse
+  .parks-inner__half
+    width: 100%
+    &:last-child
+      display: flex
+      height: calc(100vh - 100px)
+  .parks-inner #map
+    width: 20%
+    height: 100%
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 4
+    &.active
+      width: 60%
+  .parks-inner .parks-inner__slider
+    width: 80%
+    height: 100%
+  .parks-inner__half:first-child
+    padding: 30px 30px 30px 10vw
+  .more-map
+    display: block
+  .news__details-left, .news__details-right
+    width: 100%
+    position: initial
+  .years
+    width: auto
+  .years-item.active:before
+    width: 20px
+  .article__socials
+    position: initial
+    display: flex
+    justify-content: flex-start
+    flex-direction: row
+    .social
+      margin: 0 25px 50px 0
+  .article
+    padding: 60px 30px
+  .news-item
+    height: 34vw
+  .news-item__name
+    padding: 15px 25px
+  .news__details-right
+    padding-top: 0
+@media only screen and (max-width : 600px)
+  .news .news__card:before
+    border-width: 0 0 28vw 100vw
+  .news__card
+    height: 88vw
+  .news__card:before
+    border-width: 0 0 31vw 95vw
+  .section__video
+    &:before, &:after
+      content: none
+  .scroll-down
+    bottom: 10px
+    color: $color1
+    flex-direction: column
+    right: 50%
+    transform: translateX(50%)
+  .scroll-down__icon
+    margin: 10px 0
+  .title-main
+    font-size: 46px
+    line-height: 46px
+  .title
+    font-size: 18px
+    line-height: 24px
+  .text-24
+    font-size: 16px
+  .texts-col
+    width: 100%
+  .texts-col:last-child
+    margin: 20px 0 0 0
+  .header
+    padding: 15px
+  .logo
+    margin: 0
+  .testimonials-card
+    flex-direction: column-reverse
+    height: 100%
+    max-width: calc(100% - 40px)
+  .testimonials-card__right
+    width: 100%
+  .testimonials-card__img
+    max-height: 75vw
+    height: 100%
+  .testimonials-card__left
+    width: 100%
+    padding: 15px 30px
+    min-height: 400px
+  .testimonials-card__left:before
+    content: none
+  .number
+    right: 0
+  .news .row
+    display: block
+  .news .title-ubuntu
+    transform: none
+    writing-mode: horizontal-tb
+    margin: 0 auto 40px
+    padding: 0
+    position: relative
+    top: 0
+  .news .title-ubuntu:before
+    width: 0%
+    height: 100%
+    transform: none
+    writing-mode: horizontal-tb
+    transition: width .4s
+  .news .title-ubuntu.animated:before
+    width: 100%
+  .news__card-title
+    font-size: 14px
+    line-height: 18px
+    right: 10px
+    bottom: 10px
+
+  .slider-two .slider-slide
+    margin: 0
+  .switz-flag
+    width: 15px
+    height: 15px
+    margin: 7px 0 0 15px
+  .social-icon
+    width: 22px
+    height: 22px
+  .social
+    margin-right: 20px
+  .tab
+    width: 50%
+    padding: 0 15px
+    &:nth-child(2n+2)
+      border-right: none
+  .pruducts
+    padding: 100px 0
+  .slider-products .slick-track
+    min-height: 400px
+  .pruducts-inner
+    padding-top: 70px
+  .pruducts-inner__half
+    width: 100%
+    min-height: calc(50vh - 35px)
+  .card-bottom
+    padding: 10px 15px
+  .card-socials
+    flex-direction: column
+  .card-social
+    margin: 0 0 5px 5px
+    &:last-child
+      margin-bottom: 0
+  .section-news__row
+    padding: 0
+    margin-top: 20px
+  .nav-news
+    .tab:nth-child(2n+2), .tab
+      width: auto
+  .nav-news .tab
+    padding: 0 10px
+  .videos-row
+    width: 100%
+  .videos-item
+    height: 350px
+  .nav-videos .tab
+    width: auto
+    padding: 0 10px
+  .videos-play-icon
+    width: 40px
+    height: 40px
+  .parks-inner__title
+    font-size: 21px
+    line-height: 25px
+  .parks-inner__title:before
+    top: 13px
+    right: calc(100% + 15px)
+  .parks-inner__half:first-child
+    padding: 30px
+  .list-item
+    font-size: 14px
+    line-height: 21px
+  .parks-inner
+    padding-top: 70px
+  .parks-inner__half:last-child
+    height: calc(100vh - 80px)
+  .article__content
+    padding: 0 0 30px 0
+    margin-bottom: 30px
+  .article__text
+    font: 400 14px/25px "Lato-Regular"
+    margin-bottom: 20px
+  .article__row
+    display: flex
+    justify-content: space-between
+  .article__socials .social
+    margin: 0 15px 0 0
+    img
+      width: 16px
+      height: 16px
+  .article__btn span
+    display: none
+  .article__btn
+    margin-left: 20px
+  .article__btns
+    justify-content: flex-start
+  .news__details
+    padding-top: 70px
+
+
