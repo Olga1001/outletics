@@ -223,7 +223,8 @@ select, .select-item {
     position: relative;
     line-height: 1;
     -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
+    transition: all 0.3s ease;
+    text-transform: uppercase; }
     .menu-link:before {
       content: '';
       position: absolute;
@@ -1544,11 +1545,26 @@ select, .select-item {
       z-index: 1;
       pointer-events: none; }
     .parks-inner .parks-inner__slider:before {
-      background: transparent linear-gradient(-269deg, #FFFFFFDB 0%, #80808000 100%);
+      background: transparent linear-gradient(-269deg, #FFFFFFDB 0%, #80808000 90%);
       left: 0; }
     .parks-inner .parks-inner__slider:after {
       right: 0;
-      background: transparent linear-gradient(269deg, #FFFFFFDB 0%, #80808000 100%); }
+      background: transparent linear-gradient(269deg, #FFFFFFDB 0%, #80808000 90%); }
+    .parks-inner .parks-inner__slider .slick-arrow {
+      width: 160px;
+      height: 100%;
+      z-index: 2; }
+      .parks-inner .parks-inner__slider .slick-arrow:before {
+        content: none; }
+    .parks-inner .parks-inner__slider .slick-prev {
+      background: url("../img/prev-white.svg") no-repeat center/20px 26px; }
+    .parks-inner .parks-inner__slider .slick-next {
+      background: url("../img/next-white.svg") no-repeat center/20px 26px; }
+    .parks-inner .parks-inner__slider .slick-dots {
+      bottom: 5%; }
+    .parks-inner .parks-inner__slider .slick-dots li button {
+      width: 8px;
+      height: 8px; }
 
 .parks-inner__half {
   width: 50%;
@@ -1850,6 +1866,11 @@ select, .select-item {
   overflow-y: auto;
   width: 100%; }
 
+.content__box .content-item {
+  display: none; }
+  .content__box .content-item.active {
+    display: block; }
+
 .weight-bold {
   font-weight: bold;
   font-family: "Ubuntu-Bold"; }
@@ -2002,7 +2023,11 @@ select, .select-item {
   .parks-inner__half .c-black br {
     display: none; }
   .parks-inner__title {
-    font-size: 24px; } }
+    font-size: 24px; }
+  .parks-inner .parks-inner__slider .slick-arrow {
+    width: 70px; }
+  .parks-inner .parks-inner__slider:before, .parks-inner .parks-inner__slider:after {
+    width: 70px; } }
 
 @media only screen and (max-width: 850px) {
   .burger {

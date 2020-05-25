@@ -150,11 +150,28 @@
       z-index: 1
       pointer-events: none
     &:before
-      background: transparent linear-gradient(-269deg, #FFFFFFDB 0%, #80808000 100%)
+      background: transparent linear-gradient(-269deg, #FFFFFFDB 0%, #80808000 90%)
       left: 0
     &:after
       right: 0
-      background: transparent linear-gradient(269deg, #FFFFFFDB 0%, #80808000 100%)
+      background: transparent linear-gradient(269deg, #FFFFFFDB 0%, #80808000 90%)
+    .slick-arrow
+      width: 160px
+      height: 100%
+      z-index: 2
+      &:before
+        content: none
+    .slick-prev
+      background: url("../img/prev-white.svg") no-repeat center / 20px 26px
+    .slick-next
+      background: url("../img/next-white.svg") no-repeat center / 20px 26px
+    .slick-dots
+      bottom: 5%
+    .slick-dots li button
+      //background: #d6d6d6
+      width: 8px
+      height: 8px
+      //opacity: 0.5
 .parks-inner__half
   width: 50%
   position: relative

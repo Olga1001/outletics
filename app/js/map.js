@@ -4,7 +4,7 @@ var markersData = [
     lat: 40.744347,     // Широта
     lng: -74.047509,    // Долгота
     name: "GYM LOCATION", // Произвольное название, которое будем выводить в информационном окне
-    url: 'img/map_pin.svg'
+    url: 'img/map_pin.svg',
   },
   {
     lat: 40.820748,     // Широта
@@ -47,7 +47,8 @@ var markersData = [
 var centerMaps = [
   {
     latX: 40.813350,
-    latY: -74.050817
+    latY: -74.050817,
+    scale: 1.1
   }
 ]
 var map, latLng, url, name, mark, marker, thisCenter, popupContent;
@@ -93,11 +94,31 @@ function initMap() {
   };
   myoverlay.setMap(map);
   infowindow.open(map, marker);
+  marker.setIcon({
+    url: url,
+    scale: 1.1
+  });
   marker.addListener('click', function() {
     infowindow.open(map, marker);
   });
 
+  // marker.addListener('mouseover', function() {
+  //   console.log("ss1");
+  //   marker.setIcon({
+  //     url: url,
+  //     scale: 1.1
+  //   });
+  // });
+  //
+  // marker.addListener('mouseout', function() {
+  //   console.log("ss2");
+  //   marker.setIcon({
+  //     url: url,
+  //     scale: 1
+  //   });
+  // });
 }
+
 google.maps.event.addDomListener(window, "load", initMap);
 function addMarker(latLng, name, url) {
   marker = new google.maps.Marker({
@@ -106,7 +127,10 @@ function addMarker(latLng, name, url) {
     title: name,
     icon: {
       url: url,
-      scaledSize: new google.maps.Size(53, 64)
-    }
+      scaledSize: new google.maps.Size(53, 64),
+      scale: 1
+    },
   });
 }
+
+

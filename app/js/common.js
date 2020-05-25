@@ -105,7 +105,7 @@ $(document).ready(function () {
     });
     $(".parks-inner__slider").slick({
         dots: false,
-        arrows: false,
+        arrows: true,
         infinite: true,
         autoplay: true,
         fade: true,
@@ -114,6 +114,16 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         centerPadding: '0',
+        responsive: [
+            {
+                breakpoint: 850,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                }
+            },
+
+        ]
     });
 
     //HEADER scroll
@@ -196,6 +206,8 @@ $(document).ready(function () {
     $(".years-item").click(function (e) {
         $(this).addClass('active').siblings().removeClass('active');
     });
+
+
 });
 
 
